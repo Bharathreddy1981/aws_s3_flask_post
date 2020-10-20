@@ -2,7 +2,7 @@
 def mat():
 
     a={
-        "image" :"C:/Users/vanga/Desktop/nature.jpg"
+        "image" :"C:\Users\vanga\Desktop\nature.jpg"
     }
 
 
