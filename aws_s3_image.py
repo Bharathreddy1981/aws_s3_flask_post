@@ -13,7 +13,7 @@ def cat():
 
     #k = d["image"]
 
-    data= open("C:\Users\vanga\Desktop\nature.jpg", "rb")
+    data= open("C:/Users/vanga/Desktop/nature.jpg", "rb")
 
 
     s3 = boto3.resource(
