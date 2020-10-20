@@ -1,17 +1,17 @@
 import boto3
 from botocore.client import Config
-import aws_url_image
-def cat(value):
+import aws_url_image,aws_son
+def cat():
     ACCESS_KEY_ID = "AKIAZNN5NBT7VXAFB64K"
     ACCESS_SECRET_KEY = "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"
     BUCKET_NAME = "flask121"
 
-    k=value["image"]
+    #k=value["image"]
     #print(k)
 
-    #d = aws_son.mat()
+    d = aws_son.mat()
 
-    #k = d["image"]
+    k = d["image"]
 
     data= open(k, "rb")
 
