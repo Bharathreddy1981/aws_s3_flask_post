@@ -10,8 +10,8 @@ aws_flask = Flask(__name__)
 
 @aws_flask.route("/mountain", methods=["POST"])
 def gun():
-
-    final = aws_s3_image.cat()
+    jsondata = request.get_json()
+    final = aws_s3_image.cat(jsondata)
     return jsonify(final)
 
 
