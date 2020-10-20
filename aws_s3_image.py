@@ -1,7 +1,7 @@
 import boto3
 from botocore.client import Config
 import aws_url_image
-def cat(value):
+def cat():
     ACCESS_KEY_ID = "AKIAZNN5NBT7VXAFB64K"
     ACCESS_SECRET_KEY = "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"
     BUCKET_NAME = "flask121"
