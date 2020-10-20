@@ -13,28 +13,29 @@ def cat():
 
     k = d["image"]
 
-    data = open(k,"rb")
-
-    s3 = boto3.resource(
-        "s3",
-        aws_access_key_id=ACCESS_KEY_ID,
-        aws_secret_access_key=ACCESS_SECRET_KEY,
-        config=Config(signature_version="s3v4")
-    )
-    s3.Bucket(BUCKET_NAME).put_object(Key="nature.jpg", Body=data)
-
-    print("Done")
+    with open(k, "rb") as f:
 
 
+        s3 = boto3.resource(
+            "s3",
+            aws_access_key_id=ACCESS_KEY_ID,
+            aws_secret_access_key=ACCESS_SECRET_KEY,
+            config=Config(signature_version="s3v4")
+        )
+        s3.Bucket(BUCKET_NAME).put_object(Key="nature.jpg", Body=f)
 
-    url=aws_url_image.fun()
-    #print(url)
-
-    file_name="nature.jpg"
-    final_url=url+file_name
+        print("Done")
 
 
-    return {"final":final_url}
+
+        url=aws_url_image.fun()
+        #print(url)
+
+        file_name="nature.jpg"
+        final_url=url+file_name
+
+
+        return {"final":final_url}
 
 
 
