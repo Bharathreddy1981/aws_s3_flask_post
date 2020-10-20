@@ -1,6 +1,6 @@
 import boto3
 from botocore.client import Config
-import aws_url_image,aws_son
+import aws_url_image
 def cat():
     ACCESS_KEY_ID = "AKIAZNN5NBT7VXAFB64K"
     ACCESS_SECRET_KEY = "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"
@@ -9,11 +9,11 @@ def cat():
     #k=value["image"]
     #print(k)
 
-    d = aws_son.mat()
+    #d = aws_son.mat()
 
-    k = d["image"]
+    #k = d["image"]
 
-    with open(k, "rb") as f:
+    with open("C:\Users\vanga\Desktop\nature.jpg", "rb") as f:
 
 
         s3 = boto3.resource(
