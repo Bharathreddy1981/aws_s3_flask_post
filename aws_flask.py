@@ -18,4 +18,4 @@ def gun():
 
 
 if __name__=="__main__":
-    aws_flask.run(host='0.0.0.0')
+    aws_flask.run(debug=True)
