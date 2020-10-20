@@ -6,11 +6,11 @@ def cat(value):
     ACCESS_SECRET_KEY = "kPbUYhXfzx1JYcdrWuJdG5YEfsNchconnDqXqa/f"
     BUCKET_NAME = "flask121"
 
-    k=value["image"]
+    #k=value["image"]
     #print(k)
 
 
-    data = open(k,"rb")
+    data = open("C:\Users\vanga\Desktop\nature.jpg","rb")
 
     s3 = boto3.resource(
         "s3",
