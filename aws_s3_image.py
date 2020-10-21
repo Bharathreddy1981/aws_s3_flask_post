@@ -27,7 +27,7 @@ def cat(value):
     url=aws_url_image.fun()
     #print(url)
 
-    file_name="nature.jpg"
+    file_name=k
     final_url=url+file_name
 
 
