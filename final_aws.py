@@ -11,7 +11,7 @@ def bun():
     ACCESS_SECRET_KEY = "kPbUYhXfzx1JYcdrWuJdG5YEfsNchconnDqXqa/f"
     BUCKET_NAME = "flask121"
 
-    data = open("C:/Users/vanga/Desktop/nature.jpg", 'rb')
+    data = open("C:\Users\vanga\Desktop\shiva.jpg", 'rb')
 
     s3 = boto3.resource(
         "s3",
@@ -27,7 +27,7 @@ def bun():
     file_name = 'nat.jpg'
     final_url = base_url + file_name
 
-    return jsonify({'url': final_url})
+    return jsonify({'final': final_url})
 
 
 if __name__=="__main__":
