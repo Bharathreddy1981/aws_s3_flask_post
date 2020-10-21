@@ -1,9 +1,9 @@
 import boto3
 from botocore.client import Config
-import aws_url_image,aws_son
+import aws_url_image
 def cat(value):
-    ACCESS_KEY_ID = "AKIAZNN5NBT7VXAFB64K"
-    ACCESS_SECRET_KEY = "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"
+    ACCESS_KEY_ID = "AKIAZNN5NBT72GR3NKP7"
+    ACCESS_SECRET_KEY = "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"
     BUCKET_NAME = "flask121"
 
     k=value["image"]
@@ -21,7 +21,7 @@ def cat(value):
         aws_secret_access_key=ACCESS_SECRET_KEY,
         config=Config(signature_version="s3v4")
     )
-    s3.Bucket(BUCKET_NAME).put_object(Key="nature.jpg", Body=data)
+    s3.Bucket(BUCKET_NAME).put_object(Key=k, Body=data)
 
     print("Done")
     url=aws_url_image.fun()
